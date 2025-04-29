@@ -1,1 +1,11 @@
-# Bestsellers-Genre-Classification-
+# Genre Classification with NYT Bestsellers 
+## About the Project 
+This project was originally created as a part of my Data Science Portfolio class at Belmont University. It utilizes some NYT Bestseller datasets from the year 2023, which I built in a [previous project](https://github.com/katieaebi/Unifying-Data-in-Literary-Publishing/blob/main/README.md). For this project, my primary goal was to build a classification model to predict a book's genre based off of its description. My secondary goal was to fill some of the gaps in the datasets, as well as add some additional features. This is an ongoing project, so there will be future updates from time to time. I'm currently finished with my classification model, but since my gap-filling ambitions are still ongoing, I'd like to retry classification with the full datasets in the future. Thus, my analysis will likely be subject to change in the future as well. 
+## Preparation
+### Step 1: download the datasets 
+Navigate to [my previous project](https://github.com/katieaebi/Unifying-Data-in-Literary-Publishing/blob/main/README.md), and download all of the datasets I used in the form of .txt files. Each dataset is its own NYT Bestseller category (ex: hardcover fiction, paperback nonfiction, etc.). One slightly funky thing about these datasets is that each row represents a certain rank from a certain week in 2023. This is because the NYTBooks API returns the bestseller rankings for a specified week. So, for example, below is pictured a few columns from the first four rows from the hardcover fiction dataset. 
+
+### Step 2: obtain an API key from ISBNDB
+Since the original datasets don't have a genre feature, I used the ISBNDB API for getting genre labels for each title. These will be our base truth for classification. ISBNDB does require a paid subscription to access its database, but I used the basic plan, which is $14.95 a month and allows up to 5000 requests to the API per day, and that was more than enough for this project. They also offer a free 7-day trial for the basic plan, if you have absolutely no other uses for it than this. To create an ISBNDB account, navigate [here](https://isbndb.com) and click "register."
+
+### Step 3: Start pulling genre labels
